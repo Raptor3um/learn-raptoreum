@@ -19,3 +19,36 @@ theme:
 
 extra_css:
   - stylesheets/extra.css?v=1
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Learn:
+      - Introduction: learn/intro.md
+      - Tokenomics: learn/tokenomics.md
+      - Glossary: learn/glossary.md
+  - Getting Started:
+      - Beginner's Guide: start/beginners.md
+      - Exchanges: start/exchanges.md
+      - Wallet Selection: start/wallets.md
+  - Handbook:
+      - Mining: handbook/mining.md
+      - Smartnodes: handbook/smartnodes.md
+      - Core Wallet (Advanced): handbook/core-advanced.md
+  - Developer:
+      - RPC Reference:
+          - Overview: dev/rpc/index.md
+          - Address Index: dev/rpc/address-index.md
+      - Bridges: dev/bridges.md
+  - The Vault:
+      - Whitepapers: vault/papers.md

@@ -1,4 +1,4 @@
-/* Raptoreum Explorer Match */
+/* --- 1. GLOBAL COLOR VARIABLES (RAPTOREUM EXPLORER STYLE) --- */
 :root [data-md-color-scheme="slate"] {
     /* Backgrounds */
     --md-default-bg-color: #000000;
@@ -14,37 +14,118 @@
     --md-typeset-a-color: #b45a46; /* Links */
 }
 
-/* Header Design */
+/* --- 2. LAYOUT: SOLID GRAY CONTENT CARD (WIDE) --- */
+
+/* Increase the overall container width */
+.md-main__inner {
+    max-width: 2200px; /* Adjust this value to make it even wider if needed */
+}
+
+/* The main content area as a solid gray card */
+.md-content {
+    background-color: #1a1a1a; 
+    border-radius: 12px;     
+    border: 1px solid #262626;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Internal spacing */
+.md-content__inner {
+    background-color: transparent; 
+    padding: 40px !important;  
+}
+
+/* --- 3. UI COMPONENTS (HEADER, SEARCH, FOOTER) --- */
+
 .md-header {
     background-color: #0d0d0d !important;
     border-bottom: 1px solid #262626;
 }
 
-/* Search-Design */
+.md-header__inner {
+    max-width: 1200px; /* Match the content width */
+}
+
 .md-search__input {
-    background-color: #1a1a1a !important;
+    background-color: #0d0d0d !important;
     border-radius: 10px !important;
 }
 
-/* Content Card */
-.md-content__inner {
-    background-color: #000000;
-    margin-top: 20px;
+.md-footer {
+    background-color: #0d0d0d;
+    border-top: 1px solid #262626;
 }
 
-/* Navigation-Sidebar */
+.md-footer__inner {
+    max-width: 1200px; /* Match the content width */
+}
+
 .md-nav__link--active {
     color: #b45a46 !important;
     font-weight: 700;
 }
 
-/* Monospace Fonts*/
+/* --- 4. GRID CARDS (NAVIGATION TILES) --- */
+
+.md-typeset .grid.cards > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for wider layout */
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.md-typeset .grid.cards > ul > li {
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #0d0d0d;
+    transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+    border-color: #b45a46;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(180, 90, 70, 0.15);
+}
+
+/* --- 5. TYPOGRAPHY & HEADINGS --- */
+
 code, kbd, pre {
     font-family: 'Courier New', monospace !important;
 }
 
-/* Footer*/
-.md-footer {
-    background-color: #0d0d0d;
+.md-typeset h2 {
+    margin-top: 2.5em;
+    padding-top: 1.2em;
     border-top: 1px solid #262626;
+    color: #b45a46;
+}
+
+.md-typeset h3 {
+    margin-top: 2em;
+    color: #e6e6e6;
+    font-weight: 700;
+    border-left: 4px solid #b45a46;
+    padding-left: 16px;
+}
+
+.md-typeset hr {
+    border-bottom: .05rem solid #333;
+    margin: 3.5em 0;
+}
+
+/* --- 6. RESPONSIVE ADJUSTMENTS --- */
+
+@media screen and (max-width: 76.1875em) {
+    .md-content {
+        margin: 0.5rem;
+        border-radius: 0;
+    }
+    .md-content__inner {
+        padding: 20px !important;
+    }
 }
