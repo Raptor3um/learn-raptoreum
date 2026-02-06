@@ -1,0 +1,21 @@
+site_name: Raptoreum Learn
+site_url: https://explorer.raptoreum.com/tlp/
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette:
+    scheme: slate
+    primary: black # Lässt den Header dunkel
+    accent: orange
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - search.suggest
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css?v=1

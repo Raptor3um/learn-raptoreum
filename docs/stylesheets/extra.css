@@ -1,0 +1,50 @@
+/* Raptoreum Explorer Match */
+:root [data-md-color-scheme="slate"] {
+    /* Backgrounds */
+    --md-default-bg-color: #000000;
+    --md-default-bg-color--light: #0d0d0d;
+    --md-code-bg-color: #1a1a1a;
+
+    /* Primary Colors */
+    --md-primary-fg-color: #b45a46;
+    --md-primary-fg-color--transparent: rgba(180, 90, 70, 0.1);
+
+    /* Text Colors */
+    --md-typeset-color: #ffffff;
+    --md-typeset-a-color: #b45a46; /* Links */
+}
+
+/* Header Design */
+.md-header {
+    background-color: #0d0d0d !important;
+    border-bottom: 1px solid #262626;
+}
+
+/* Search-Design */
+.md-search__input {
+    background-color: #1a1a1a !important;
+    border-radius: 10px !important;
+}
+
+/* Content Card */
+.md-content__inner {
+    background-color: #000000;
+    margin-top: 20px;
+}
+
+/* Navigation-Sidebar */
+.md-nav__link--active {
+    color: #b45a46 !important;
+    font-weight: 700;
+}
+
+/* Monospace Fonts*/
+code, kbd, pre {
+    font-family: 'Courier New', monospace !important;
+}
+
+/* Footer*/
+.md-footer {
+    background-color: #0d0d0d;
+    border-top: 1px solid #262626;
+}
