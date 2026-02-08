@@ -18,7 +18,7 @@ theme:
     - content.code.copy
 
 extra_css:
-  - stylesheets/extra.css?v=1
+  - stylesheets/extra.css
 
 markdown_extensions:
   - attr_list
@@ -31,6 +31,7 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.snippets
 
 nav:
   - Learn:
@@ -43,12 +44,28 @@ nav:
       - Wallet Selection: start/wallets.md
   - Handbook:
       - Mining: handbook/mining.md
-      - Smartnodes: handbook/smartnodes.md
       - Core Wallet (Advanced): handbook/core-advanced.md
+  - Smartnodes:
+        - Overview: handbook/smartnodes/index.md
+        - Setup Guide: handbook/smartnodes/setup.md    
   - Developer:
       - RPC Reference:
           - Overview: dev/rpc/index.md
-          - Address Index: dev/rpc/address-index.md
+          - Address Index: dev/rpc/addressindex.md
+          - Assets: dev/rpc/assets.md
+          - Blockchain: dev/rpc/blockchain.md
+          - Control: dev/rpc/control.md
+          - Evo: dev/rpc/evo.md
+          - Generating: dev/rpc/generating.md
+          - Mining: dev/rpc/mining.md
+          - Network: dev/rpc/network.md
+          - Raptoreum: dev/rpc/raptoreum.md
+          - Raw Transactions: dev/rpc/rawtransactions.md
+          - Util: dev/rpc/util.md
+          - Wallet: dev/rpc/wallet.md
+          - Zmq: dev/rpc/zmq.md
+      - Knowless:
+          - Transactions: dev/knowless/transactions.md
       - Bridges: dev/bridges.md
   - The Vault:
       - Whitepapers: vault/papers.md

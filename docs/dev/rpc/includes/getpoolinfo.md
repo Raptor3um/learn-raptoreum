@@ -1,0 +1,10 @@
+## getpoolinfo
+
+
+
+### Arguments
+
+No arguments.
+
+
+---
