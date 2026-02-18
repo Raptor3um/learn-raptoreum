@@ -38,11 +38,3 @@ Privacy: They offer optional privacy features like CoinJoin.
 ## Why are Smartnodes Unique?
 Raptoreum's Smartnodes are unique because they go beyond the typical roles of Masternodes. By integrating side chains and smart contract execution, Raptoreum is creating a versatile and powerful network capable of supporting advanced decentralized applications while maintaining security, scalability, and privacy.
 Passive Income
-
-
-## Smrtnodes Reward
-Smartnodes offer a way to earn RTM passively while strengthening the network. For their work Smartnodes earn 20% of the block reward, they also earn RTM that is spent when creating future transactions and asset creation fees.
-Each Smartnode is paid out in order.
-
-**A calculation example:**
-With 1,000 Smartnodes and an average block time of 120 seconds, one cycle takes around 33 hours. If, for example, you own one Smartnode out of these 1,000, you will receive your Smartnode reward once every 33 hours.

@@ -7,7 +7,7 @@ theme:
   favicon: assets/logo.png
   palette:
     scheme: slate
-    primary: black # Lässt den Header dunkel
+    primary: black
     accent: orange
   font:
     text: Roboto
@@ -34,20 +34,39 @@ markdown_extensions:
   - pymdownx.snippets
 
 nav:
-  - Learn:
-      - Introduction: learn/intro.md
-      - Tokenomics: learn/tokenomics.md
-      - Glossary: learn/glossary.md
-  - Getting Started:
-      - Beginner's Guide: start/beginners.md
-      - Exchanges: start/exchanges.md
-      - Wallet Selection: start/wallets.md
-  - Handbook:
-      - Mining: handbook/mining.md
-      - Core Wallet (Advanced): handbook/core-advanced.md
+  - Wallets:
+        - Raptoreum Core Wallet: 
+            - Overview: handbook/wallets/core/index.md
+            - Installation: handbook/wallets/core/installation.md
+            - Bootstraps: handbook/wallets/core/bootstraps.md  
+            - QT Wallet (Desktop):
+              - Raptoreum Core QT: handbook/wallets/core/qt.md
+              - Asstes:
+                - Overview: handbook/wallets/core/assets/index.md
+                - Video Tutorial: handbook/wallets/core/assets/tutorials.md
+                - Quick Guide: handbook/wallets/core/assets/guide.md
+            - CLI Wallet (Command Line):
+              - Raptoreum Core CLI: handbook/wallets/core/cli/cli.md
+              - Config & Start: handbook/wallets/core/cli/start.md
+        - Stacy & Rapthorus:
+            - Overview: handbook/wallets/webwallets/index.md
+  - Mining:
+        - Overview: handbook/mining/index.md
+        - Raptorwings: handbook/mining/raptorwings.md
   - Smartnodes:
         - Overview: handbook/smartnodes/index.md
-        - Setup Guide: handbook/smartnodes/setup.md    
+        - Knowless: handbook/smartnodes/knowless_smartnodes.md   
+        - Setup Guide: handbook/smartnodes/setup.md
+        - Troubleshooting: handbook/smartnodes/troubleshooting.md
+  - Assets:
+        - Overview: handbook/assets/index.md
+  - Papers:
+        - Overview: handbook/papers/index.md
+        - Raptoreum Litepaper: handbook/papers/litepaper.md
+        - Raptoreum Reward System: handbook/papers/reward_system.md
+        - Ghostwriter Paper: handbook/papers/ghostwriter.md
+  - Bridges:
+        - BSC <-> RTM: handbook/bridges/bsc_rtm.md
   - Developer:
       - RPC Reference:
           - Overview: dev/rpc/index.md
@@ -64,8 +83,8 @@ nav:
           - Util: dev/rpc/util.md
           - Wallet: dev/rpc/wallet.md
           - Zmq: dev/rpc/zmq.md
-      - Knowless:
-          - Transactions: dev/knowless/transactions.md
-      - Bridges: dev/bridges.md
-  - The Vault:
-      - Whitepapers: vault/papers.md
+      - Transactions:
+          - Overview: dev/knowless/transactions.md
+          - Create Raw Transaction: dev/knowless/rawtransaction.md
+      - IFPS Cluster:
+          - Join The IPFS Cluster: dev/ipfs/index.md    
