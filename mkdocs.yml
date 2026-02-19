@@ -50,6 +50,7 @@ nav:
               - Config & Start: handbook/wallets/core/cli/start.md
         - Stacy & Rapthorus:
             - Overview: handbook/wallets/webwallets/index.md
+            - Rapthorus: handbook/wallets/webwallets/rapthorus/index.md
   - Mining:
         - Overview: handbook/mining/index.md
         - Raptorwings: handbook/mining/raptorwings.md
