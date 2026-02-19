@@ -1,2 +1,5 @@
 .venv
 read_commands.py
+.gitignore
+git_auto_update.py
+log/

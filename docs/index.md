@@ -45,3 +45,8 @@ Stay connected and get support from our community members and developers.
 | **Main Explorer** | [explorer.raptoreum.com](https://explorer.raptoreum.com) |
 | **GitHub** | [github.com/Raptor3um](https://github.com/Raptor3um/raptoreum) |
 | **Social Media** | [:simple-x:](https://twitter.com/raptoreum) [:simple-youtube:](https://www.youtube.com/@RaptoreumOfficial) [:material-linkedin:](https://www.linkedin.com/company/raptoreum/) [:simple-threads:](https://www.threads.net/@raptoreum) |
+
+---
+
+### Collaboration
+If you are interested in helping to edit this page as a kind of wiki, you can support us on Github at https://github.com/Raptor3um/learn-raptoreum.
