@@ -38,7 +38,8 @@ nav:
         - Raptoreum Core Wallet: 
             - Overview: handbook/wallets/core/index.md
             - Installation: handbook/wallets/core/installation.md
-            - Bootstraps: handbook/wallets/core/bootstraps.md  
+            - Bootstraps: handbook/wallets/core/bootstraps.md
+            - HD Mode: handbook/wallets/core/hd_mode.md  
             - QT Wallet (Desktop):
               - Raptoreum Core QT: handbook/wallets/core/qt.md
               - Asstes:
