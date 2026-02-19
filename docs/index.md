@@ -50,3 +50,4 @@ Stay connected and get support from our community members and developers.
 
 ### Collaboration
 If you are interested in helping to edit this page as a kind of wiki, you can support us on Github at https://github.com/Raptor3um/learn-raptoreum.
+This site automatically retrieves your data from the Github project and updates automatically approximately 5 minutes after a change in Github.
