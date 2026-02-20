@@ -62,6 +62,9 @@ nav:
         - Troubleshooting: handbook/smartnodes/troubleshooting.md
   - Assets:
         - Overview: handbook/assets/index.md
+        - Create on QT Wallet:
+            - Video Tutorial: handbook/wallets/core/assets/tutorials.md
+            - Quick Guide: handbook/wallets/core/assets/guide.md
   - Papers:
         - Overview: handbook/papers/index.md
         - Raptoreum Litepaper: handbook/papers/litepaper.md
