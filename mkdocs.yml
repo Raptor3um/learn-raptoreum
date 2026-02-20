@@ -34,6 +34,8 @@ markdown_extensions:
   - pymdownx.snippets
 
 nav:
+  - Raptoreum:
+        - Overview: handbook/project/project_index.md
   - Wallets:
         - Raptoreum Core Wallet: 
             - Overview: handbook/wallets/core/index.md
