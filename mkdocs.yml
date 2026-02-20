@@ -49,6 +49,9 @@ nav:
             - CLI Wallet (Command Line):
               - Raptoreum Core CLI: handbook/wallets/core/cli/cli.md
               - Config & Start: handbook/wallets/core/cli/start.md
+            - Future Transitions:
+              - Overview: handbook/wallets/core/futures/futures_index.md
+              - QT Wallet Transition: handbook/wallets/core/futures/qt_transition.md
         - Stacy & Rapthorus:
             - Overview: handbook/wallets/webwallets/index.md
             - Rapthorus: handbook/wallets/webwallets/rapthorus/index.md
