@@ -55,6 +55,8 @@ nav:
         - Stacy & Rapthorus:
             - Overview: handbook/wallets/webwallets/index.md
             - Rapthorus: handbook/wallets/webwallets/rapthorus/index.md
+        - Third-Party Wallets:
+            - Overview: handbook/wallets/thirdparty/thirdparty_index.md
   - Mining:
         - Overview: handbook/mining/index.md
         - Raptorwings: handbook/mining/raptorwings.md
