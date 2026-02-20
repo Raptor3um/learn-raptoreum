@@ -65,6 +65,7 @@ nav:
         - Create on QT Wallet:
             - Video Tutorial: handbook/wallets/core/assets/tutorials.md
             - Quick Guide: handbook/wallets/core/assets/guide.md
+        - Core RLC Comamands: dev/rpc/assets.md
   - Papers:
         - Overview: handbook/papers/index.md
         - Raptoreum Litepaper: handbook/papers/litepaper.md
