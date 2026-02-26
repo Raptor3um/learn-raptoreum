@@ -5,7 +5,7 @@
 ### Arguments
 
 | Position | Name            | Type    | Required | Default | Description                                                                                                         |
-
+| :---     | :---            | :---    | :---     | :---    | :---                                                                                                                |
 | 1        | name:           | string  | True     |         | Asset name.                                                                                                         |
 | 2        | updatable:      | bool    | False    | True    | If true, this asset can be modify using reissue process.                                                            |
 | 3        | is_root:        | bool    | True     |         | True if this asset is a Root Asset.                                                                                 |
