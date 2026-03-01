@@ -105,3 +105,5 @@ nav:
       - Fork Raptoreum with Git:
           - Overview: dev/fork/index_fork.md
           - Pull Request Guide: dev/fork/pull_request.md
+      - Compile Raptoreum:
+          - Ubuntu: dev/compile/ubuntu.md
