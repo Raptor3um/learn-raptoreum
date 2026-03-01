@@ -101,4 +101,7 @@ nav:
           - Overview: dev/knowless/transactions.md
           - Create Raw Transaction: dev/knowless/rawtransaction.md
       - IFPS Cluster:
-          - Join The IPFS Cluster: dev/ipfs/index.md    
+          - Join The IPFS Cluster: dev/ipfs/index.md
+      - Fork Raptoreum with Git:
+          - Overview: dev/fork/index_fork.md
+          - Pull Request Guide: dev/fork/pull_request.md
