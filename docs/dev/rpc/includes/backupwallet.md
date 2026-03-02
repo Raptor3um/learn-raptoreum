@@ -6,7 +6,7 @@ Safely copies current wallet file to destination, which can be a directory or a 
 
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
+| 1 | destination | string | True |  | The destination directory or file. |
 
 ### Result
 ```json
