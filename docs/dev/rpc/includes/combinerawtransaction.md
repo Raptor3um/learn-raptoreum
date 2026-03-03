@@ -1,11 +1,14 @@
 ## combinerawtransaction
 
 Combine multiple partially signed transactions into one transaction.
+The combined transaction may be another partially signed transaction or a
+fully signed transaction.
 
 ### Arguments
 
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | txs | string | True |   | A json array of hex strings of partially signed transactions |
 
 
 ### Result
