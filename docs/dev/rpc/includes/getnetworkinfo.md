@@ -1,6 +1,6 @@
 ## getnetworkinfo
 
-{                                                    (json object)
+Returns an object containing various state info regarding P2P networking.
 
 ### Arguments
 
