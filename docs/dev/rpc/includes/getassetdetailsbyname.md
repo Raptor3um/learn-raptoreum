@@ -1,12 +1,10 @@
 ## getassetdetailsbyname
-
-1. "assetname"                (string, required) asset name
+Return asset details from name.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
+| 1 | assetname | string | True |  | asset name |
 
 ### Result
 ```json
@@ -18,4 +16,3 @@
  raptoreum-cli getassetdetailsbyname WenMoon
 ```
 
----
