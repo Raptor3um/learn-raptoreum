@@ -1,13 +1,21 @@
 ## getblocktemplate
-
 If the request parameters include a 'mode' key, that is used to explicitly select between the default 'template' request or a 'proposal'.
+It returns data needed to construct a block to work on.
+For full specification, see BIPs 22, 23, and 9:
+    https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki
+    https://github.com/bitcoin/bips/blob/master/bip-0023.mediawiki
+    https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki#getblocktemplate_changes
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | `template_request` | json object | Optional | [] | See CLI help for details |
-
+| 1 | template_request | json object | False |  | A json object in the following spec |
+| **Template_request** |  |  |  |  |  |
+| 1.1 | mode | string | False |  | This must be set to "template", "proposal" (see BIP 23), or omitted. |
+| 1.2 | capabilities | json array | False |  | A list of strings. |
+| 1.3 | support | string |  |  | Client side supported feature, 'longpoll', 'coinbasetxn', 'coinbasevalue', 'proposal', 'serverlist', 'workid'. |
+| 1.4 | rules | json array | False |  | A list of strings. |
+| 1.5 | support | string |  |  | Client side supported softfork deployment. |
 
 ### Result
 ```json
@@ -86,11 +94,12 @@ If the request parameters include a 'mode' key, that is used to explicitly selec
 ```
 
 ### Examples
+
 ```bash
  raptoreum-cli getblocktemplate
 ```
+
 ```bash
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblocktemplate", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
