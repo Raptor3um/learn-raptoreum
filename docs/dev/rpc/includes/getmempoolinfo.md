@@ -1,10 +1,8 @@
 ## getmempoolinfo
-
 Returns details on the active state of the TX memory pool.
 
 ### Arguments
-
-No arguments.
+None
 
 ### Result
 ```json
@@ -24,8 +22,8 @@ No arguments.
 ```bash
  raptoreum-cli getmempoolinfo
 ```
+
 ```bash
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmempoolinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
