@@ -1,12 +1,10 @@
 ## getmempoolentry
-
-Returns mempool data for given transaction
+Returns mempool data for given transaction.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
+| 1 | txid | string | True |  | The transaction id (must be in mempool) |
 
 ### Result
 ```json
@@ -45,8 +43,8 @@ Returns mempool data for given transaction
 ```bash
  raptoreum-cli getmempoolentry "mytxid"
 ```
+
 ```bash
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmempoolentry", "params": ["mytxid"] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
