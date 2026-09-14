@@ -1,10 +1,2 @@
 ## getpoolinfo
-
-
-
-### Arguments
-
-No arguments.
-
-
----
+DEPRECATED. Please use getcoinjoininfo instead.
