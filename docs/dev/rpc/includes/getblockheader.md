@@ -1,20 +1,19 @@
 ## getblockheader
-
 If verbose is false, returns a string that is serialized, hex-encoded data for blockheader 'hash'.
+If verbose is true, returns an Object with information about blockheader <hash>.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2 | `verbose` | boolean | Optional | true | See CLI help for details |
-
+| 1 | blockhash | string | True |  | The block hash |
+| 2 | verbose | boolean | False | true | true for a json object, false for the hex-encoded data |
 
 ### Examples
 ```bash
  raptoreum-cli getblockheader "00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"
 ```
+
 ```bash
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockheader", "params": ["00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
