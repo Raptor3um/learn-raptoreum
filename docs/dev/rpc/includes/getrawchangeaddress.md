@@ -1,6 +1,7 @@
 ## getrawchangeaddress
 
 Returns a new Raptoreum address, for receiving change.
+This is for use with raw transactions, NOT normal use.
 
 ### Arguments
 
