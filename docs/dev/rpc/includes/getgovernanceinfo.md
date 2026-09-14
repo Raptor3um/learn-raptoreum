@@ -1,10 +1,8 @@
 ## getgovernanceinfo
-
-{                               (json object)
+Returns an object containing governance parameters.
 
 ### Arguments
-
-No arguments.
+None
 
 ### Result
 ```json
@@ -21,8 +19,7 @@ No arguments.
 ```bash
  raptoreum-cli getgovernanceinfo
 ```
+
 ```bash
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getgovernanceinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
-
----
