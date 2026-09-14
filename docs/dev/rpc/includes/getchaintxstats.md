@@ -1,14 +1,11 @@
 ## getchaintxstats
-
 Compute statistics about the total number and rate of transactions in the chain.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | `nblocks` | numeric | Optional | one month | See CLI help for details |
-| 2 | `blockhash` | string | Optional | chain tip | See CLI help for details |
-
+| 1 | nblocks | numeric | False | one month | Size of the window in number of blocks |
+| 2 | blockhash | string | False | chain tip | The hash of the block that ends the window. |
 
 ### Result
 ```json
@@ -28,8 +25,8 @@ Compute statistics about the total number and rate of transactions in the chain.
 ```bash
  raptoreum-cli getchaintxstats
 ```
+
 ```bash
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getchaintxstats", "params": [2016] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
