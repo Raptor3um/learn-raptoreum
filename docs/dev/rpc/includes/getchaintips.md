@@ -1,14 +1,11 @@
 ## getchaintips
-
-1. count        (numeric, optional, default=) only show this much of latest tips
+Return information about all known tips in the block tree, including the main chain as well as orphaned branches.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | `count` | numeric | Optional | [] | See CLI help for details |
-| 2 | `branchlen` | numeric | Optional | [] | See CLI help for details |
-
+| 1 | count | numeric | False |  | only show this much of latest tips |
+| 2 | branchlen | numeric | False |  | only show tips that have equal or greater length of branch |
 
 ### Result
 ```json
@@ -36,8 +33,8 @@
 ```bash
  raptoreum-cli getchaintips
 ```
+
 ```bash
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getchaintips", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
