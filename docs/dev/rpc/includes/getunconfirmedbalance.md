@@ -1,15 +1,11 @@
 ## getunconfirmedbalance
-
-n    (numeric) The balance
+Returns the server's total unconfirmed balance.
 
 ### Arguments
-
-No arguments.
+None
 
 ### Result
-```json
+```text
 n    (numeric) The balance
 ```
 
-
----
