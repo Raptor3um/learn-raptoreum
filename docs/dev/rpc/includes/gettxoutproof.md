@@ -1,12 +1,17 @@
 ## gettxoutproof
-
 Returns a hex-encoded proof that "txid" was included in a block.
+NOTE: By default this function only works sometimes. This is when there is an
+unspent output in the utxo for this transaction. To make it always work,
+you need to maintain a transaction index, using the -txindex command line option or
+specify the block in which the transaction is included manually (by blockhash).
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
+| 1 | txids | json array | True |  | A json array of txids to filter |
+| **Txids** |  |  |  |  |  |
+| 1.1 | txid | string |  |  | A transaction hash. |
+| 2 | blockhash | string | False |  | If specified, looks for txid in the block with this hash |
 
 ### Result
 ```json
@@ -23,5 +28,3 @@ Returns a hex-encoded proof that "txid" was included in a block.
 ```bash
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxoutproof", "params": [["mytxid",...], "blockhash"] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
-
----
