@@ -1,13 +1,12 @@
 ## gettxout
-
 Returns details about an unspent transaction output.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 3 | `include_mempool` | boolean | Optional | true | See CLI help for details |
-
+| 1 | txid | string | True |  | The transaction id |
+| 2 | n | numeric | True |  | vout number |
+| 3 | include_mempool | boolean | False | true | Whether to include the mempool. Note that an unspent output that is spent in the mempool won't appear. |
 
 ### Result
 ```json
@@ -28,25 +27,20 @@ Returns details about an unspent transaction output.
   "coinbase" : true|false     (boolean) Coinbase or not
 }
 ```
-
 ### Examples
-```bash
-Get unspent transactions
-```
+
+ Get unspent transactions:
 ```bash
  raptoreum-cli listunspent
 ```
-```bash
-View the details
-```
+
+ View the details:
 ```bash
  raptoreum-cli gettxout "txid" 1
 ```
-```bash
-As a json rpc call
-```
+
+ As a json rpc call:
 ```bash
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxout", "params": ["txid", 1] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
