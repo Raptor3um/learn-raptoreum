@@ -1,13 +1,11 @@
 ## gettxoutsetinfo
-
 Returns statistics about the unspent transaction output set.
+Note this call may take some time.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | `hash_type` | string | Optional | hash_serialized_2) Which UTXO set hash should be calculated. Options: 'hash_serialized_2' (the legacy algorithm | See CLI help for details |
-
+| 1 | hash_type | string | False | hash_serialized_2 | Which UTXO set hash should be calculated. Options: 'hash_serialized_2' (the legacy algorithm), 'none'. |
 
 ### Result
 ```json
@@ -27,8 +25,8 @@ Returns statistics about the unspent transaction output set.
 ```bash
  raptoreum-cli gettxoutsetinfo
 ```
+
 ```bash
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxoutsetinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
