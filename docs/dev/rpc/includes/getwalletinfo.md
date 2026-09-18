@@ -1,10 +1,8 @@
 ## getwalletinfo
-
-{                                         (json object)
+Returns an object containing various wallet state info.
 
 ### Arguments
-
-No arguments.
+None
 
 ### Result
 ```json
@@ -40,7 +38,6 @@ No arguments.
   "private_keys_enabled" : true|false     (boolean) false if privatekeys are disabled for this wallet (enforced watch-only wallet)
 }
 ```
-
 ### Examples
 ```bash
  raptoreum-cli getwalletinfo
@@ -49,4 +46,3 @@ No arguments.
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getwalletinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
