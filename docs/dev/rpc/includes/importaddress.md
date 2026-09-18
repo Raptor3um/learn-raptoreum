@@ -1,15 +1,18 @@
 ## importaddress
-
 Adds an address or script (in hex) that can be watched as if it were in your wallet but cannot be used to spend. Requires a new wallet backup.
+Note: This call can take over an hour to complete if rescan is true, during that time, other rpc calls
+may report that the imported address exists but related transactions are still missing, leading to temporarily incorrect/bogus balances and unspent outputs until rescan completes.
+If you have the full public key, you should call importpubkey instead of this.
+Note: If you import a non-standard raw script in hex form, outputs sending to it will be treated
+as change, and not show up in many RPCs.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2 | `label` | string | Optional | "" | See CLI help for details |
-| 3 | `rescan` | boolean | Optional | true | See CLI help for details |
-| 4 | `p2sh` | boolean | Optional | false | See CLI help for details |
-
+| 1 | address | string | True |  | The Raptoreum address (or hex-encoded script) |
+| 2 | label | string | False | "" | An optional label |
+| 3 | rescan | boolean | False | true | Rescan the wallet for transactions |
+| 4 | p2sh | boolean | False | false | Add the P2SH version of the script as well |
 
 ### Result
 ```json
@@ -17,23 +20,23 @@ null    (json null)
 ```
 
 ### Examples
-```bash
-Import an address with rescan
-```
+
+Import an address with rescan:
+
 ```bash
  raptoreum-cli importaddress "myaddress"
 ```
-```bash
-Import using a label without rescan
-```
+
+Import using a label without rescan:
+
 ```bash
  raptoreum-cli importaddress "myaddress" "testing" false
 ```
-```bash
-As a JSON-RPC call
-```
+
+
+As a JSON-RPC call:
+
 ```bash
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importaddress", "params": ["myaddress", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
