@@ -1,16 +1,14 @@
 ## listreceivedbyaddress
-
 List balances by receiving address.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | `minconf` | numeric | Optional | 1 | See CLI help for details |
-| 2 | `addlocked` | boolean | Optional | false | See CLI help for details |
-| 3 | `include_empty` | boolean | Optional | false | See CLI help for details |
-| 4 | `include_watchonly` | boolean | Optional | false) Whether to include watch-only addresses (see 'importaddress' | See CLI help for details |
-
+| 1 | minconf | numeric | False | 1 | The minimum number of confirmations before payments are included. |
+| 2 | addlocked | boolean | False | false | Whether to include transactions locked via InstantSend. |
+| 3 | include_empty | boolean | False | false | Whether to include addresses that haven't received any payments. |
+| 4 | include_watchonly | boolean | False | false | Whether to include watch-only addresses (see 'importaddress'). |
+| 5 | address_filter | string | False |  | If present, only return information on this address. |
 
 ### Result
 ```json
@@ -46,4 +44,3 @@ List balances by receiving address.
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbyaddress", "params": [6, false, true, true, "XbtdLrTsrPDhGy1wXtwKYoBpuKovE3JeBK"] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
