@@ -1,16 +1,13 @@
 ## listreceivedbylabel
-
 List received transactions by label.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | `minconf` | numeric | Optional | 1 | See CLI help for details |
-| 2 | `addlocked` | boolean | Optional | false | See CLI help for details |
-| 3 | `include_empty` | boolean | Optional | false | See CLI help for details |
-| 4 | `include_watchonly` | boolean | Optional | false) Whether to include watch-only addresses (see 'importaddress' | See CLI help for details |
-
+| 1 | minconf | numeric | False | 1 | The minimum number of confirmations before payments are included. |
+| 2 | addlocked | boolean | False | false | Whether to include transactions locked via InstantSend. |
+| 3 | include_empty | boolean | False | false | Whether to include labels that haven't received any payments. |
+| 4 | include_watchonly | boolean | False | false | Whether to include watch-only addresses (see 'importaddress'). |
 
 ### Result
 ```json
@@ -36,4 +33,3 @@ List received transactions by label.
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbylabel", "params": [6, true, true] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
