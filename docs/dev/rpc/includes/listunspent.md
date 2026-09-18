@@ -1,16 +1,24 @@
 ## listunspent
-
 Returns array of unspent transaction outputs
+with between minconf and maxconf (inclusive) confirmations.
+Optionally filter to only include txouts paid to specified addresses.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | `minconf` | numeric | Optional | 1 | See CLI help for details |
-| 2 | `maxconf` | numeric | Optional | 9999999 | See CLI help for details |
-| 3 | `addresses` | json array | Optional | empty array | See CLI help for details |
-| 4 | `include_unsafe` | boolean | Optional | true | See CLI help for details |
-
+| 1 | minconf | numeric | False | 1 | The minimum confirmations to filter |
+| 2 | maxconf | numeric | False | 9999999 | The maximum confirmations to filter |
+| 3 | addresses | json array | False | empty array | A json array of raptoreum addresses to filter |
+| **Addresses** |  |  |  |  |  |
+| 3.1 | address | string |  |  | Raptoreum address. |
+| 4 | include_unsafe | boolean | False | true | Include outputs that are not safe to spend |
+| 5 | query_options | json object | False |  | JSON with query options |
+| **Query_options** |  |  |  |  |  |
+| 5.1 | minimumAmount | numeric or string | False | 0 | Minimum value of each UTXO in RTM. |
+| 5.2 | maximumAmount | numeric or string | False | unlimited | Maximum value of each UTXO in RTM. |
+| 5.3 | maximumCount | numeric | False | unlimited | Maximum number of UTXOs. |
+| 5.4 | minimumSumAmount | numeric or string | False | unlimited | Minimum sum value of all UTXOs in RTM. |
+| 5.5 | coinType | numeric | False | 0 | Filter coinTypes as follows:. |
 
 ### Result
 ```json
@@ -52,4 +60,3 @@ Returns array of unspent transaction outputs
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listunspent", "params": [6, 9999999, [] , true, { "minimumAmount": 0.005 } ] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
