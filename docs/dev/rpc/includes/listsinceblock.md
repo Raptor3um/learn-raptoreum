@@ -1,15 +1,15 @@
 ## listsinceblock
-
 Get all transactions in blocks since block [blockhash], or all transactions if omitted.
+If "blockhash" is no longer a part of the main chain, transactions from the fork point onward are included.
+Additionally, if include_removed is set, transactions affecting the wallet which were removed are returned in the "removed" array.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2 | `target_confirmations` | numeric | Optional | 1 | See CLI help for details |
-| 3 | `include_watchonly` | boolean | Optional | false) Include transactions to watch-only addresses (see 'importaddress' | See CLI help for details |
-| 4 | `include_removed` | boolean | Optional | true | See CLI help for details |
-
+| 1 | blockhash | string | False |  | If set, the block hash to list transactions since, otherwise list all transactions. |
+| 2 | target_confirmations | numeric | False | 1 | Return the nth block hash from the main chain. e.g. 1 would mean the best block hash. Note: this is not used as a filter, but only affects [lastblock] in the return value |
+| 3 | include_watchonly | boolean | False | false | Include transactions to watch-only addresses (see 'importaddress') |
+| 4 | include_removed | boolean | False | true | Show transactions that were removed due to a reorg in the "removed" array |
 
 ### Result
 ```json
@@ -19,7 +19,7 @@ Get all transactions in blocks since block [blockhash], or all transactions if o
       "involvesWatchonly" : true|false,       (boolean) Only returns true if imported addresses were involved in transaction
       "address" : "str",                      (string) The raptoreum address of the transaction. Not present for move transactions (category = move).
       "category" : "str",                     (string) The transaction category. 'send' has negative amounts, 'receive' has positive amounts.
-      "amount" : n,                           (numeric) The amount in RTM. This is negative for the 'send' category, and for the 'move' category for moves 
+      "amount" : n,                           (numeric) The amount in RTM. This is negative for the 'send' category, and for the 'move' category for moves
                                               outbound. It is positive for the 'receive' category, and for the 'move' category for inbound funds.
       "vout" : n,                             (numeric) the vout value
       "fee" : n,                              (numeric) The amount of the fee in RTM. This is negative and only available for the 'send' category of transactions.
@@ -37,7 +37,7 @@ Get all transactions in blocks since block [blockhash], or all transactions if o
       "blocktime" : xxx,                      (numeric) The block time expressed in UNIX epoch time.
       "txid" : "hex",                         (string) The transaction id. Available for 'send' and 'receive' category of transactions.
       "time" : xxx,                           (numeric) The transaction time expressed in UNIX epoch time.
-      "timereceived" : xxx,                   (numeric) The time received expressed in UNIX epoch time. Available 
+      "timereceived" : xxx,                   (numeric) The time received expressed in UNIX epoch time. Available
                                               for 'send' and 'receive' category of transactions.
       "comment" : "str",                      (string) If a comment is associated with the transaction.
       "abandoned" : true|false,               (boolean) 'true' if the transaction has been abandoned (inputs are respendable). Only available for the 'send' category of transactions.
@@ -66,4 +66,3 @@ Get all transactions in blocks since block [blockhash], or all transactions if o
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listsinceblock", "params": ["000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
