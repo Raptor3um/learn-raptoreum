@@ -1,12 +1,10 @@
 ## validateaddress
-
 Return information about the given raptoreum address.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
+| 1 | address | string | True |  | The Raptoreum address to validate |
 
 ### Result
 ```json
@@ -26,4 +24,3 @@ Return information about the given raptoreum address.
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "validateaddress", "params": ["XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg"] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
