@@ -1,0 +1,43 @@
+## smartnodelist ( "mode" "filter" )
+Get a list of smartnodes in different modes. This call is identical to 'smartnode list' call.
+
+Available modes:
+  addr           - Print ip address associated with a smartnode (can be additionally filtered, partial match)
+  full           - Print info in format 'status payee lastpaidtime lastpaidblock IP'
+                   (can be additionally filtered, partial match)
+  info           - Print info in format 'status payee IP'
+                   (can be additionally filtered, partial match)
+  json           - Print info in JSON format (can be additionally filtered, partial match)
+  lastpaidblock  - Print the last block height a node was paid on the network
+  lastpaidtime   - Print the last time a node was paid on the network
+  owneraddress   - Print the smartnode owner Raptoreum address
+  payee          - Print the smartnode payout Raptoreum address (can be additionally filtered,
+                   partial match)
+  pubKeyOperator - Print the smartnode operator public key
+  status         - Print smartnode status: ENABLED / POSE_BANNED
+                   (can be additionally filtered, partial match)
+  votingaddress  - Print the smartnode voting Raptoreum address
+
+### Arguments
+| Position | Name | Type | Required | Default | Description |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | mode | string | False | json | The mode to run list in. |
+| 1 | filter | string | False |  | Filter results. Partial match by outpoint by default in all modes, additional matches in some modes are also available. |
+
+
+### Result
+```json
+{                             (json object)
+  "f87c0aa634c05563ef32fb91f49dda1672bb3fa97ae439bae528995a9c6b1ef3-0": "           ENABLED RPB1jzRD2guVyTnFMA7KphnVrpvP7LKHkf 1789885484 1433623 188.134.85.91:10226",
+  "22353d067884d5fa72adc17ac65021bd8e4ac0e4c7373a919e639a06f52e70b8-0": "           ENABLED RDuiwaVJWmZHDteUcoUR48uZeXAGgc4Ksa 1789913134 1433856 185.146.195.99:10226",
+  "6e420cb9982c56b64e7c91bc3cc8956d6163aad66c856f6341cc1ca5b74b8e14-1": "           ENABLED RDnTJoQP5aTsuPrFH5FrJmgQHESzvS4Atw 1789884956 1433620 104.234.191.174:10226",
+   ...
+  "114e7c111b18be420cf07c949b42c9a8d0af6c1917519a90c5c75447cd0b2711-0": "           ENABLED RRs7t9ctoFpWDy8W9X71GygCVzSdrGbYfb 1789823064 1433113 151.244.85.44:10226",
+  "4afaab4eafe1814f6312798919a60eaffb48dc930f963e86f5444763e325da22-1": "           ENABLED RYQZo84JEjb5piKgcZEFF9o7c9Lnvv1WzM 1789913559 1433866 173.249.24.54:10226"
+}
+```
+
+### Examples
+```bash
+ raptoreum-cli smartode list full
+```
