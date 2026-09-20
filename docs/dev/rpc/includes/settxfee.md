@@ -1,15 +1,13 @@
 ## settxfee
-
 Set the transaction fee per kB for this wallet. Overrides the global -paytxfee command line parameter.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
+| 1 | amount | numeric or string | True |  | The transaction fee in RTM/kB |
 
 ### Result
-```json
+```text
 true|false    (boolean) Returns true if successful
 ```
 
@@ -21,4 +19,3 @@ true|false    (boolean) Returns true if successful
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "settxfee", "params": [0.00001] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
