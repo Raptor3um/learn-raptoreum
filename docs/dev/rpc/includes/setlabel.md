@@ -1,12 +1,11 @@
 ## setlabel
-
 Sets the label associated with the given address.
 
 ### Arguments
-
 | Position | Name | Type | Required | Default | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
+| 1 | address | string | True |  | The raptoreum address to be associated with a label. |
+| 2 | label | string | True |  | The label to assign to the address. |
 
 ### Result
 ```json
@@ -21,4 +20,3 @@ null    (json null)
  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setlabel", "params": ["XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwG", "tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:10225/
 ```
 
----
