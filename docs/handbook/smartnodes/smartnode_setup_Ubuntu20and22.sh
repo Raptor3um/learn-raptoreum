@@ -482,7 +482,7 @@ cat << EOF
 
 Information you may need:
 - Smartnode runs under user "mcsmarty"
-- To change to that user do: su - mcsmarty
+- To change to that user do: sudo -iu mcsmarty
 - Easy commands: height (blockheight), peerinfo (list peers), networkinfo, stopnode (stops raptoreumd), startnode (starts raptoreumd)
 - Cronjob has been added so raptoreumd will auto start on a reboot
 
